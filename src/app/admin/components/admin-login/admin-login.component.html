@@ -1,0 +1,30 @@
+<form [formGroup]="loginForm" class="needs-validation" (ngSubmit)="LoginUser()">
+  <div class="card" style="width: 50%" style="margin:10%;">
+    <h5 class="card-header">Login Here</h5>
+    <div class="card-body" >
+            <div class="row mt-2">
+              <div class="col-md-3"></div>
+              <div class="col-md-6">
+                <input type="text" formControlName="userName" class="form-control" placeholder="User Name"required value="Admin@evontech.com">
+              </div>
+              <div class="row mt-2">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                  <input type="password" formControlName="userPassword" class="form-control" placeholder="Enter Password" required value="1234">
+
+                </div>
+
+               </div>
+               <div class="row  mt-2">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                  <button class="btn btn-primary w-50" [disabled]="loginForm.invalid" type="submit">Login</button>
+                </div>
+                <div class="col-md-3"></div>
+               </div>
+               <a routerLink="/signup">SignUp Here</a>
+
+          </div>
+    </div>
+  </div>
+</form>

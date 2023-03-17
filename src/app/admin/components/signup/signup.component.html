@@ -1,0 +1,32 @@
+<form [formGroup]="signUpForm" class="needs-validation" (ngSubmit)="SignupUser()">
+  <div class="card" style="width: 50%" style="margin:10%;">
+    <h5 class="card-header">Sign Up Here</h5>
+    <div class="card-body" >
+            <div class="row mt-2">
+              <div class="col-md-6">
+                <input type="text" formControlName="userName" class="form-control" placeholder="User Name"required>
+              </div>
+              <div class="col-md-6">
+                <input type="text" formControlName="userPassword" class="form-control" placeholder="User Password"required>
+              </div>
+            </div>
+              <div class="row mt-2">
+                <div class="col-md-6">
+                  <input type="email" formControlName="userEmail" class="form-control" placeholder="Enter Email" required>
+                </div>
+                <div class="col-md-6">
+                  <input type="number" formControlName="userMobile" class="form-control" placeholder="Enter Mobile" required>
+                </div>
+               </div>
+               <div class="row  mt-2">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                  <button class="btn btn-primary w-50" [disabled]="signUpForm.invalid" type="submit">Register</button>
+                </div>
+                <div class="col-md-3"></div>
+               </div>
+               <a routerLink="/login">Login Here</a>
+          </div>
+    </div>
+</form>
+
